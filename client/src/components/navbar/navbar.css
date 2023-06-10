@@ -1,3 +1,34 @@
+.expresso-logo {
+    height: 3rem;
+}
+.dashboard-avatar{
+    border: 3px solid #ddd;
+    border-radius: 50%;
+}
+
+.bg-theme{
+    background-color: #c0c2c7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fdfdfd;
+    color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 100;
+}
+
+.sidenav.active {
+    transform: translateX(0%);
+}
+
+
 .app__navbar{
     display: flex;
     justify-content: space-between;

@@ -28,10 +28,6 @@ const Lecturer = db.define('Lecturer', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    address: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     departmentId: {
         type: DataTypes.INTEGER,
         allowNull: false,
