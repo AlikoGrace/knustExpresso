@@ -11,6 +11,17 @@ function AcademicInformationComponent({onPrevious,onNext}) {
     const addressKeyRef = useRef(null)
     const bioRef = useRef(null)
 
+    const handlePersonalInformation=()=>{
+            console.log(fNameRef.current.value)
+            console.log(sNameRef.current.value)
+            console.log(dobRef.current.value)
+            console.log(emailRef.current.value)
+            console.log(phoneRef.current.value)
+            console.log(passKeyRef.current.value)
+            console.log(addressKeyRef.current.value)
+    }
+
+
     return (
         <section>
             <div className="container mt-1 p-5">

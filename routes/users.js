@@ -13,6 +13,101 @@ var crypto = require('crypto');
 
 const secretKey = process.env.INTERN_ACCESS_TOKEN_SECRET;
 
+
+router.post('/email',(req,res)=>{
+
+    const nodemailer = require('nodemailer');
+
+// Create a transporter object
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.titan.email',
+        port: 587, // Hostinger SMTP port
+        secure: false, // Set to true if using a secure connection (e.g., port 465)
+        auth: {
+            user: 'info@codeden.org', // Your Hostinger email address
+            pass: 'bob@Cumulus#4717' // Your Hostinger email password
+        }
+    });
+
+    // Construct the HTML content for the email
+    const emailContent = `
+  <html>
+    <body>
+      <h1>Invitation to ....!</h1>
+      <p>Please click the button below to agree to my invitation</p>
+      <a href="https://www.example.com/verify-email" target="_blank" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">Verify Email</a>
+    </body>
+  </html>
+`;
+
+// Configure the email options
+    const mailOptions = {
+        from: 'info@codeden.org',
+        to: 'robertdoe60@gmail.com',
+        subject: 'Verification Email',
+        html: emailContent,
+    };
+
+
+
+
+
+// Define the email options
+    /*const mailOptions = {
+        from: 'info@codeden.org',
+        to: 'gracealiko08@gmail.com',
+        subject: 'Mailer Alert',
+        text: "Dear grace, the mailing portion of the API is working. "
+    };
+*/
+// Send the email
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            console.log('Error occurred:', error.message);
+            res.json({ msg: 'Error sending email' });
+        } else {
+            console.log('Email sent successfully!');
+            console.log('Message ID:', info.messageId);
+            res.json({ msg: 'Email sent successfully' });
+        }
+    });
+
+
+    /*// Create a transporter object
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'robertdoe60@gmail.com',
+                pass: 'jmkdatnisxhxktpx'
+            }
+        });
+
+    // Define the email options
+        const mailOptions = {
+            from: 'robertdoe60@gmail.com',
+            to: 'robertdoe60@gmail.com',
+            subject: 'Hello from Nodemailer',
+            text: 'This is a test email sent using Nodemailer.'
+        };
+
+    // Send the email
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+                console.log('Error occurred:', error.message);
+                res.json({msg: "Error sending email"})
+            } else {
+                console.log('Email sent successfully!');
+                console.log('Message ID:', info.messageId);
+                res.json({msg: "Email sent successfully"})
+            }
+        });*/
+})
+
+
+
+
+
+
 // Get all interns
 router.get('/', async (req, res) => {
     try {

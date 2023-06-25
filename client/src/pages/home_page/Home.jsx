@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png'
 import '../../assets/header_bg.jpg'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import './home.css'
+import {Link} from "react-router-dom";
 
 const Home = () => {
     const [toggleMenu, setToggleMenu]= useState(false)
@@ -13,7 +14,7 @@ const Home = () => {
             <div className="home__navbar">
                 <div className="home__navbar-links">
                     <div className="home__navbar-links_logo">
-                        <img src={logo}/>
+                        <img src={logo} height={105}/>
                     </div>
                     <div className="home__navbar-links_container">
                         <p><a href="#home">Home</a></p>
@@ -23,7 +24,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="home__navbar-sign">
-                    <button type="button">Sign up</button>
+                    <Link type="button" className={'homepage-button'}>Sign up</Link>
                 </div>
                 <div className="home__navbar-menu">
                     {toggleMenu
@@ -61,4 +62,5 @@ const Home = () => {
         </div>
     )
 }
+
 export default Home

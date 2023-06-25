@@ -4,7 +4,7 @@ import {GiHamburgerMenu} from "react-icons/gi";
 import React, {useState} from "react";
 import {NavLink} from 'react-router-dom';
 import './navbar.css'
-import DashboardSideMdNav from "../../pages/dashboard/DashboardSideMdNav";
+import DashboardSideMdNav from "../../auth-pages/student/dashboard/DashboardSideMdNav";
 
 function DashboardNav(){
 

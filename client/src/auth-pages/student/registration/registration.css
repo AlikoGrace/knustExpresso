@@ -1,0 +1,89 @@
+.container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 15px 20px #ABB2B9;
+}
+
+.ibody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.registration-body{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    height: 100vh;
+
+}
+
+aside .logo{
+    display: flex;
+    gap: 0.8rem;
+}
+aside .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .top{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+.loginBody::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3; /* Set the desired opacity value between 0 and 1 */
+}
+
+
+.stepper-indicator{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+
+}
+
+.main-content{
+    grid-column: span 8;
+    background-color: #f8fbf8;
+}
+
+.number-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c0c2c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.number.active {
+    background-color: #ffa500; /* or any other color you prefer */
+    /* additional styles for active number */
+}

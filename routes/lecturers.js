@@ -4,6 +4,51 @@ const express = require('express');
 const router = express.Router();
 const Lecturer = require('../models/Lecturer');
 
+
+// Define the route for pushing JSON data to the database
+router.get('/push', async (req, res) => {
+    try {
+        const lecturers = require('../config/lecturers');
+
+        // Loop through the lecturers array and create records in the database
+        for (const lecturerData of lecturers) {
+            // Extract the properties from the JSON object
+            const {
+                firstName,
+                lastName,
+                gender,
+                email,
+                phoneNumber,
+                departmentId,
+                position,
+                profileLink,
+                imageSrc
+            } = lecturerData;
+
+            // Create a lecturer record in the database
+            await Lecturer.create({
+                firstName,
+                lastName,
+                gender,
+                email,
+                phoneNumber,
+                departmentId,
+                position,
+                profileLink,
+                imageSrc
+            });
+        }
+
+        res.send('Data successfully pushed to the database.');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error pushing data to the database.');
+    }
+});
+
+
+
+
 // Get all lecturers
 router.get('/', async (req, res) => {
     try {

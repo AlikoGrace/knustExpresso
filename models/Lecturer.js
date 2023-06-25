@@ -36,6 +36,14 @@ const Lecturer = db.define('Lecturer', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    profileLink: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    imageSrc: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
 });
 
 module.exports = Lecturer;

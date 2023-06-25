@@ -13,6 +13,7 @@
     padding: 2rem 6rem;
 }
 
+
 .home__navbar-links{
     flex: 1;
     display: flex;
@@ -20,12 +21,13 @@
     align-items: center;
 }
 
+
 .home__navbar-links_logo{
     margin-right: 2rem;
 }
 
 .home__navbar-links_logo img{
-    width: 80px;
+    height: 80px;
 }
 .home__navbar-links_container{
     display: flex;
@@ -53,8 +55,7 @@
 }
 
 
-.home__navbar-sign button,
-.home__navbar-menu_container button{
+.homepage-button{
     padding: 0.5rem 1rem;
     color:black;
     background: var(--grace-yellow);
