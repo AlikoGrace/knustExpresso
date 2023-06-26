@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "devBuild": "cd client && npm run build && cd .. && npm start",
     "start": "nodemon server.js"
   },
   "author": "",
