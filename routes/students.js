@@ -164,7 +164,7 @@ router.post('/account-registration', async (req, res) => {
         <body>
           <h1>Email Verification</h1>
           <p>Thank you for signing up. Please click the button below to verify your email:</p>
-          <a class="verify-button" href="http://knustexpresso.codeden.org/verify/?token=${verificationToken}">Verify Email</a>
+          <a class="verify-button" href="https://knustexpresso.codeden.org/verify/?token=${verificationToken}">Verify Email</a>
         </body>
       </html>
     `
