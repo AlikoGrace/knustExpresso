@@ -9,8 +9,9 @@ function SignUp(props) {
     const confirmPassKeyRef=useRef()
 
     const signUpHandler=(e)=>{
+        console.log("Using CodeDen")
         e.preventDefault()
-        if(passKeyRef.current.value===confirmPassKeyRef.current.value){
+        if(passKeyRef.current.valuee===confirmPassKeyRef.current.value){
             console.log({
                 email:emailRef.current.value,
                 passkey:passKeyRef.current.value
