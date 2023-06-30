@@ -11,7 +11,7 @@ function SignUp(props) {
     const signUpHandler=(e)=>{
         console.log("Using CodeDen")
         e.preventDefault()
-        if(passKeyRef.current.value===confirmPassKeyRef.current.value){
+       // if(passKeyRef.current.value===confirmPassKeyRef.current.value){
             console.log({
                 email:emailRef.current.value,
                 passkey:passKeyRef.current.value
@@ -28,9 +28,9 @@ function SignUp(props) {
                     console.error(error);
                 });
 
-        }else{
+        /*}else{
             alert("Notice: Unmatching passwords")
-        }
+        }*/
     }
 
 
