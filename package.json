@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "devStart": "cd client && npm run build && cd .. && npm start"
   },
   "author": "",
   "license": "ISC",

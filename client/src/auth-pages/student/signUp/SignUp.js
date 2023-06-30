@@ -16,7 +16,7 @@ function SignUp(props) {
                 passkey:passKeyRef.current.value
             })
 
-            axios.post('http://localhost:9999/api/students/account-registration', {
+            axios.post('https://knustexpresso.codeden.org/api/students/account-registration', {
                 email:emailRef.current.value,
                 passKeyRef:passKeyRef.current.value
             })
