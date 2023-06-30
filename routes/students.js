@@ -136,7 +136,7 @@ router.post('/account-registration', async (req, res) => {
         port: 587,
         secure: false,
         auth: {
-            user: 'info@codeden.org',
+            user: 'knustexpresso@codeden.org',
             pass: 'bob@Cumulus#4717'
         }
     });
@@ -164,7 +164,7 @@ router.post('/account-registration', async (req, res) => {
         <body>
           <h1>Email Verification</h1>
           <p>Thank you for signing up. Please click the button below to verify your email:</p>
-          <a class="verify-button" href="http:localhost:9999/verify/?token=${verificationToken}">Verify Email</a>
+          <a class="verify-button" href="http://knustexpresso.codeden.org/verify/?token=${verificationToken}">Verify Email</a>
         </body>
       </html>
     `
