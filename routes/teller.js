@@ -6,9 +6,6 @@ const router = express.Router();
 const {v4: uuidv4} = require('uuid');
 const PAYSTACK_SECRET_KEY = 'sk_live_20a17270c56f71eeb3b8dced173f3c31dc49accd';
 
-
-
-
 // Endpoint for creating a payment request
 router.post('/create-payment', async (req, res) => {
     const { amount, email, callbackUrl, requestId, studentId } = req.body;
