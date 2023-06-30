@@ -1,5 +1,4 @@
 // models/Payment.js
-
 const { DataTypes } = require('sequelize');
 const db = require('../config/db');
 
@@ -22,18 +21,6 @@ const Payment = db.define('Payment', {
         allowNull: false,
     },
     date: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    status: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    paystackId:{
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    paystackReference:{
         type: DataTypes.STRING,
         allowNull: false,
     },
